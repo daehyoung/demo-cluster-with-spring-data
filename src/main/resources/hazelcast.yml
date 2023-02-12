@@ -1,0 +1,21 @@
+hazelcast:
+  cluster-name: "device-io-loader"
+  network:
+    port:
+      port: 5900
+    join:
+#      auto-detection:
+#        enabled: true
+#
+#      multicast:
+#        enabled: false
+#        multicast-group: 224.0.0.1
+      tcp-ip:
+        enabled: true
+        member-list:
+          - 192.168.100.10-20
+          - 192.168.100.16
+    interfaces:
+      enabled: true
+      interfaces:
+        - 192.168.100.10
